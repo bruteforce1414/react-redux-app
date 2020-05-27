@@ -6,14 +6,6 @@ import * as actions from './actions';
 const store=createStore(reducer);
 const {dispatch}=store;
 
-/*
-actions={
-    inc:inc,
-    dec:dec,
-    rnd:rnd}
-
-    */
-
 const {inc, dec, rnd}=bindActionCreators(actions, dispatch);
 
 
@@ -30,8 +22,6 @@ document.getElementById('rnd').addEventListener('click', ()=>{
 });
 
 
-
-
 const update=()=>{
     document.getElementById('counter').textContent=store.getState()
 };
@@ -40,12 +30,4 @@ const update=()=>{
 
 store.subscribe(update)
 
-/*
-store.subscribe(()=>{
-    console.log(store.getState());
-});
-store.dispatch({type:'INC'});
-store.dispatch({type:'INC'});
-store.dispatch({type:'INC'});
-*/
 
