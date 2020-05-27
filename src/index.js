@@ -1,17 +1,14 @@
-import {createStore} from 'redux';
+import {createStore, bindActionCreators} from 'redux';
 import reducer from './reducer';
 import {inc,dec,rnd} from './actions';
-
-
-
 
 
 const store=createStore(reducer);
 const {dispatch}=store;
 
-const incDispatch=()=>dispatch(inc());
-const decDispatch=()=>dispatch(dec());
-const rndDispatch=(value)=>dispatch(rnd(value));
+const incDispatch=bindActionCreators(inc, dispatch);
+const decDispatch=bindActionCreators(dec,dispatch );
+const rndDispatch=bindActionCreators(rnd, dispatch);
 
 
 
