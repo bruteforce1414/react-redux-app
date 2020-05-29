@@ -7,9 +7,9 @@
             "es6":true
         },
         "parserOptions": {
-            "ecmaVersion": 6 // or 7,8,9
+            "ecmaVersion": 6 
         }
     },
-    "asi": true,
+    "asi": true
 }
 
